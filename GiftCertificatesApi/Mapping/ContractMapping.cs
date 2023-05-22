@@ -4,9 +4,9 @@ namespace GiftCertificates.Api.Mapping
 {
     public static class ContractMapping
     {
-        public static CertificateInfoResponse MapToAvailableDateResponse(this List<CertificateInfoResult> result)
+        public static CertificatesInfoResponse MapToCertificatesInfoResponse(this List<CertificateInfoResult> result)
         {
-            var response = new CertificateInfoResponse();
+            var response = new CertificatesInfoResponse();
 
             foreach (var certInfo in result)
             {
@@ -32,6 +32,15 @@ namespace GiftCertificates.Api.Mapping
             }
 
             return response;
+        }
+
+        public static CertificateInfoResponse MapToCertificateInfoResponse(this CertificateInfoResult result)
+        {          
+            return new CertificateInfoResponse
+            {
+                Barcode = result.Barcode,
+                Sum = result.Sum
+            };
         }
     }
 }

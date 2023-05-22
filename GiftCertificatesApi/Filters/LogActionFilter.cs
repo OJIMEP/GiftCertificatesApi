@@ -78,7 +78,15 @@ namespace GiftCertificates.Api.Filters
             try
             {
                 if (actionArguments != null)
-                    return $"{JsonSerializer.Serialize(actionArguments["request"])}";
+                {
+                    if (actionArguments.TryGetValue("request", out object request)) {
+                        return $"{JsonSerializer.Serialize(request)}";
+                    }
+                    if (actionArguments.TryGetValue("barcode", out object barcode))
+                    {
+                        return (string)barcode;
+                    }
+                }
             }
             catch (Exception ex)
             {

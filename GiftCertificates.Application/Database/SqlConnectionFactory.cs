@@ -136,7 +136,6 @@ namespace GiftCertificates.Application.Database
                 {
                     DatabaseType.Main => DbCheckQueries.DatabaseBalancingMain,
                     DatabaseType.ReplicaFull => DbCheckQueries.DatabaseBalancingReplicaFull,
-                    DatabaseType.ReplicaTables => DbCheckQueries.DatabaseBalancingReplicaTables,
                     _ => ""
                 };
 

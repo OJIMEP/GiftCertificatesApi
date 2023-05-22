@@ -14,7 +14,6 @@
             {
                 "main" => DatabaseType.Main,
                 "replica_full" => DatabaseType.ReplicaFull,
-                "replica_tables" => DatabaseType.ReplicaTables,
                 _ => DatabaseType.Main
             };
         }

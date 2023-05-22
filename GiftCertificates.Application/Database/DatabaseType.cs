@@ -3,7 +3,6 @@
     public enum DatabaseType
     {
         Main,
-        ReplicaFull,
-        ReplicaTables
+        ReplicaFull
     }
 }

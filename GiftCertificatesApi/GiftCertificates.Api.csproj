@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="AdditionalFiles\appsettings_example.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="AdditionalFiles\appsettings_example.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GiftCertificates.Application\GiftCertificates.Application.csproj" />
   </ItemGroup>
 

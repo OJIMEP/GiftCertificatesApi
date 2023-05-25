@@ -33,6 +33,7 @@
 					_Fld14496RRef) T2 
 					ON T1._Fld14496RRef = T2._Fld14496RRef
 						AND T1._Period = T2.Период
+		--OPTION (KEEP PLAN, KEEPFIXED PLAN);
 		;
 		SELECT
 			Сертификат,
@@ -47,6 +48,7 @@
 		GROUP BY
 			Сертификат
 		HAVING Sum(_Fld16861) > 0
+		--OPTION (KEEP PLAN, KEEPFIXED PLAN);
 		;
 		SELECT
 			#Temp_CertRef.Штрихкод AS Barcode,

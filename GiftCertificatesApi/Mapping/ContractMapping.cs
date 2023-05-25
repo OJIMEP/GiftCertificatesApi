@@ -22,7 +22,8 @@ namespace GiftCertificates.Api.Mapping
                     continue;
                 }
 
-                if (!certInfo.IsActive)
+                //сертификат не в статусе "Активирован", "Частично погашен" или нет суммы (бывают косяки с суммами)
+                if (!certInfo.IsActive || certInfo.Sum <= 0) 
                 {
                     response.AddError(certInfo.Barcode, 400, "Сертификат не активен");
                     continue;
